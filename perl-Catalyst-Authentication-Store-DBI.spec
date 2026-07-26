@@ -1,15 +1,13 @@
 %define upstream_name    Catalyst-Authentication-Store-DBI
-%define upstream_version 0.01
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.01
+Release:	7
 
 Summary:	User object representing a
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Catalyst-Authentication-Store-DBI
-Source0:	https://cpan.metacpan.org/authors/id/J/JA/JANUS/Catalyst-Authentication-Store-DBI-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/J/JA/JANUS/Catalyst-Authentication-Store-DBI-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +24,7 @@ and it provides support for the Catalyst::Plugin::Authorization::Roles
 manpage.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -50,9 +48,7 @@ make test
 
 * Tue Aug 04 2009 Jérôme Quelin <jquelin@mandriva.org> 0.10.0-1mdv2011.0
 + Revision: 408922
-- rebuild using %%perl_convert_version
-
-* Sun Jul 19 2009 Buchan Milne <bgmilne@mandriva.org> 0.01-1mdv2010.0
+- rebuild using %0.01 Sun Jul 19 2009 Buchan Milne <bgmilne@mandriva.org> 0.01-1mdv2010.0
 + Revision: 397949
 - import perl-Catalyst-Authentication-Store-DBI
 
